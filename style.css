@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+/* font-family: 'Ubuntu', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Basics Classses*/
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Basics Classes*/
+
+
+
+
+/* Navbar Start's */
+
+nav{
+    background: #47597E;
+    padding: 5px 40px;
+}
+
+nav ul{
+    list-style: none;
+    flex-wrap: wrap;
+    position: sticky;
+}
+
+nav ul li{
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+nav ul li.items{
+    position: relative;
+    width: auto;
+    margin: 0 16px;
+    text-align: center;
+    order: 3;
+}
+
+nav ul li.items:after{
+    position: absolute;
+    content: '';
+    bottom: 5px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+nav ul li.items:hover:after{
+    opacity: 1;
+    bottom: 8px;
+}
+
+nav ul li.logo{
+flex: 1;
+color: white;
+font-size: 25px;
+font-weight: 600;
+cursor: default;
+user-select: none;
+}
+
+
+nav ul li a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    transition: .4s;
+}
+
+nav ul li:hover a{
+    padding-bottom: 2px;
+    border-bottom: #fff 2px solid;
+}
+
+nav ul li i{
+    font-size: 25px;
+}
+
+nav ul li.btn{
+    display: none;
+}
+
+nav ul li.btn.hide i:before{
+    content: '\f00d';
+}
+
+/* Navbar End's */
+
+/* Home Start's */
+
+.home-container{
+    height: 91vh;
+}
+
+.home-content .owner-name{
+    font-size: 4rem;
+    text-align: center;
+    animation: slideInFromLeft 1s ease-in;
+}
+
+.home-content p{
+    font-size: 1.8rem;
+    padding: 0px 100px;
+    text-align: center;
+    animation: slideInFromLeft 1s ease-in;
+}
+
+.home-img{
+    animation: slideInFromRight 1s ease-in;
+}
+
+.home-img img{
+    height: 600px;
+    width: 500px;
+}
+
+
+/* Home End's */
+
+
+
+/* Book Start */
+
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.books-container{
+    margin: 80px;
+}
+
+.book-box{
+    width: 250px;
+    height: auto;
+    border: 2px solid black;
+}
+
+.book-box img{
+    height: 300px;
+    width: 250px;
+}
+
+.bookname{
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #47597E;
+}
+
+.book-price{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:#47597E;
+}
+
+.cut{
+    font-size: 1.2rem;
+    text-decoration: line-through;
+}
+
+.downloadbtn{
+    text-decoration: none;
+    display: block;
+    border: 2px solid #47597E;
+    padding: 5px;
+    text-align: center;
+    color: #47597E;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
+/* Book End */
+
+
+/* Media Query */
+
+@media only screen 
+   and (min-width : 320px)  and (max-width : 767px){
+   
+    /* Navbar */
+    nav{
+        padding: 5px 30px;
+    }
+
+    nav ul li.items{
+        width: 100%;
+        display: none;
+    }
+
+    nav ul li.items.show{
+        display: block;
+    }
+
+    nav ul li.btn{
+        display: block;
+    }
+    
+
+    nav ul li.items:hover{
+        border-radius: 5px;
+        box-shadow: inset 0 0 5px #fff,
+                    inset 0 0 10px #fff;
+    }
+
+    nav ul li:hover a{
+        border-bottom:none
+    }
+
+    nav ul li.items:hover:after{
+        opacity: 0;
+    }
+
+    /* Home */
+    .home-container{
+        flex-direction: column;
+    }
+
+    .home-content .owner-name{
+        font-size: 2rem;
+        font-weight: bolder;
+        margin-top: 40px;
+    }
+
+    .home-content p{
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 20px;
+        padding: 0;
+    }
+    
+    .home-img img{
+        margin-top: 40px;
+        height: 250px;
+        width: 200px;
+        padding: 0;
+       
+
+    }
+
+    .home-content .owner-name{
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .home-content p{
+        font-size: .8rem;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .home-img img{
+        height: 390px;
+        width: 330px;
+    }
+
+
+}
+
+
+   @media only screen and (min-width : 768px)  and (max-width : 1024px){
+
+            
+        .logo{
+            text-align: center;
+        }
+
+        .home-content p{
+            font-size: 1rem;
+            margin-top: 20px;
+            padding: 0;
+        }
+        
+        .home-img img{
+            margin-top: 40px;
+            height: 450px;
+            width: 400px;
+            padding: 0;
+        }
+
+        .home-content .owner-name{
+            font-size: 2rem;
+            font-weight: bolder;
+        }
+
+        .home-content p{
+            font-size: .8rem;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        /* .home-img img{
+            margin-top: 40px;
+            height: 450px;
+            width: 500px;
+        } */
+
+
+}
+
+   /* Animation */
+
+
+   @keyframes slideInFromRight {
+    0% { 
+        transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+   @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
