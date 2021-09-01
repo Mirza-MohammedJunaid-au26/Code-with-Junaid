@@ -8,6 +8,10 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+body{
+    color: #47597E;
+}
+
 /* Basics Classses*/
 
 .flex{
@@ -16,6 +20,39 @@
     align-items: center;
 }
 
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.heading2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.heading3{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.web-heading{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.about-heading{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 80px;
+}
 /* Basics Classes*/
 
 
@@ -97,10 +134,7 @@ nav ul li.btn.hide i:before{
     content: '\f00d';
 }
 
-/* Navbar End's */
-
-/* Home Start's */
-
+/* Navbar End's */course-section
 .home-container{
     height: 91vh;
 }
@@ -134,30 +168,39 @@ nav ul li.btn.hide i:before{
 
 /* Book Start */
 
-.heading{
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bolder;
+.html-css{
+    margin-top: 50px;
 }
 
 .books-container{
-    margin: 80px;
+    margin: 30px;
 }
 
 .book-box{
     width: 250px;
     height: auto;
-    border: 2px solid black;
+    overflow: hidden;
+    margin: auto;
+    align-self: center;
 }
 
 .book-box img{
     height: 300px;
     width: 250px;
+    border-radius:20px ;
 }
 
 .bookname{
     margin-top: 15px;
     font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #47597E;
+}
+
+.bookname2{
+    margin-top: 15px;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     color: #47597E;
@@ -182,13 +225,150 @@ nav ul li.btn.hide i:before{
     padding: 5px;
     text-align: center;
     color: #47597E;
-    margin: 20px;
+    margin: 15px;
     border-radius: 10px;
+}
+
+.downloadbtn:hover{
+    background: #47597E;
+    color: #fff;
+    transition: .3s ease-in-out;
 }
 
 
 /* Book End */
 
+
+/* Course Start */
+
+.course-section{
+    width: 100vw;
+}
+
+.course-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+
+.course-box{
+    flex-direction: column;
+    align-self: center;
+}
+
+.recommend{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    
+}
+
+/* Course End */
+
+
+/* Challenges Starts */
+
+#challenges-section{
+    margin-top: 100px;
+}
+
+.challenges-box img{
+    height: 300px;
+    width: 300px;
+    margin-left: 20px;
+}
+
+
+.name-details{
+    margin-left: 20px;
+    border-left: 2px solid #47597E;
+    border-right: 2px solid #47597E;
+}
+
+.challenges-name{
+    text-align: center;
+}
+
+.details{
+    padding: 10px 20px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.click-here{
+    text-decoration: none;
+    display: block;
+    border: 2px solid #47597E;
+    padding: 5px;
+    text-align: center;
+    color: #47597E;
+    margin: 15px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.click-here:hover{
+    background: #47597E;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+/* Challenges Ends */
+
+/* About Us */
+
+#about-section{
+    margin-top: 100px;
+}
+
+.about-container{
+    gap: 10rem;
+}
+
+.card{
+    width: 350px;
+ 
+}
+
+.imgbox img{
+    border-radius: 50%;
+    height: 200px;
+    width: 250px;
+    display: block;
+    margin: auto;
+    transform: rotate(-10deg);
+}
+
+.content h2,h3,p{
+    text-align: center;
+}
+
+.content h2{
+    margin: 20px 0;
+}
+
+.content h3{
+    margin: 10px 0;
+}
+
+.content p{
+    font-weight: bold;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.socials{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.socials a i{
+    font-size: 2rem;
+    margin: 0 15px;
+    color: #47597E;
+}
 
 /* Media Query */
 
@@ -237,6 +417,7 @@ nav ul li.btn.hide i:before{
         font-size: 2rem;
         font-weight: bolder;
         margin-top: 40px;
+        color: #47597E;
     }
 
     .home-content p{
@@ -244,6 +425,7 @@ nav ul li.btn.hide i:before{
         font-weight: bold;
         margin-top: 20px;
         padding: 0;
+        color: #47597E;
     }
     
     .home-img img{
@@ -271,6 +453,50 @@ nav ul li.btn.hide i:before{
         width: 330px;
     }
 
+
+    /* Books */
+
+    .books-container{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Courses */
+
+    iframe{
+        width:350px; 
+        height:250px;
+    }
+
+    /* Challenges */
+
+    .challenges-box img{
+        height: 200px;
+        width: 200px;
+    }
+    
+
+    .challenges-box{
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .name-details{
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid #47597E;
+        border-bottom: 2px solid #47597E;
+        padding: 10px;
+    }
+
+    /* About */
+
+    .about-container{
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    
 
 }
 
@@ -306,11 +532,19 @@ nav ul li.btn.hide i:before{
             padding: 0;
         }
 
-        /* .home-img img{
-            margin-top: 40px;
-            height: 450px;
-            width: 500px;
-        } */
+        /* Challenges */
+
+        .challenges-box img{
+            height: 200px;
+            width: 200px;
+        }
+
+        .click-here{
+            width: 300px;
+        }
+
+        
+    
 
 
 }
